@@ -1,50 +1,52 @@
-"use client";
+"use client"
 
-import React from 'react';
-import { Search, Heart, ShoppingCart, User } from 'lucide-react';
-import { usePathname } from 'next/navigation';
+import React, { useState } from 'react'
+import { Search, Heart, ShoppingCart, User, ShoppingBag, X, Star, LogOut } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 export const Header = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   return (
-    <header className="py-4 px-6 border-b">
+    <header className="py-4 px-6 border-b relative">
       <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
         <h1 className="text-2xl font-bold">Exclusive</h1>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a
+          <Link
             href="/"
             className={`hover:text-gray-600 ${
               pathname === '/' ? 'border-b-2 border-black' : ''
             }`}
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/contact"
             className={`hover:text-gray-600 ${
               pathname === '/contact' ? 'border-b-2 border-black' : ''
             }`}
           >
             Contact
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className={`hover:text-gray-600 ${
               pathname === '/about' ? 'border-b-2 border-black' : ''
             }`}
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             href="/signup"
             className={`hover:text-gray-600 ${
               pathname === '/signup' ? 'border-b-2 border-black' : ''
             }`}
           >
             Sign Up
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4 ml-auto md:ml-0">
@@ -66,12 +68,58 @@ export const Header = () => {
                 2
               </span>
             </button>
-            <button>
+            <button 
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="relative"
+            >
               <User size={24} />
             </button>
+
+            {/* User Dropdown */}
+            {isDropdownOpen && (
+              <div className="absolute top-full right-0 mt-2 w-64 rounded-lg shadow-lg overflow-hidden z-50">
+                <div className="bg-gradient-to-b from-gray-700 to-gray-800 text-white py-2">
+                  <button 
+                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    onClick={() => {/* Handle account */}}
+                  >
+                    <User size={20} />
+                    <span>Manage My Account</span>
+                  </button>
+                  <button 
+                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    onClick={() => {/* Handle orders */}}
+                  >
+                    <ShoppingBag size={20} />
+                    <span>My Order</span>
+                  </button>
+                  <button 
+                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    onClick={() => {/* Handle cancellations */}}
+                  >
+                    <X size={20} />
+                    <span>My Cancellations</span>
+                  </button>
+                  <button 
+                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    onClick={() => {/* Handle reviews */}}
+                  >
+                    <Star size={20} />
+                    <span>My Reviews</span>
+                  </button>
+                  <button 
+                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    onClick={() => {/* Handle logout */}}
+                  >
+                    <LogOut size={20} />
+                    <span>Logout</span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
