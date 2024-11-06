@@ -13,37 +13,33 @@ export const Header = () => {
     <header className="py-4 px-6 border-b relative">
       <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
         <h1 className="text-2xl font-bold">Exclusive</h1>
-        
+
         <nav className="hidden md:flex items-center space-x-8">
           <Link
             href="/"
-            className={`hover:text-gray-600 ${
-              pathname === '/' ? 'border-b-2 border-black' : ''
-            }`}
+            className={`hover:text-gray-600 ${pathname === '/' ? 'border-b-2 border-black' : ''
+              }`}
           >
             Home
           </Link>
           <Link
             href="/contact"
-            className={`hover:text-gray-600 ${
-              pathname === '/contact' ? 'border-b-2 border-black' : ''
-            }`}
+            className={`hover:text-gray-600 ${pathname === '/contact' ? 'border-b-2 border-black' : ''
+              }`}
           >
             Contact
           </Link>
           <Link
             href="/about"
-            className={`hover:text-gray-600 ${
-              pathname === '/about' ? 'border-b-2 border-black' : ''
-            }`}
+            className={`hover:text-gray-600 ${pathname === '/about' ? 'border-b-2 border-black' : ''
+              }`}
           >
             About
           </Link>
           <Link
             href="/signup"
-            className={`hover:text-gray-600 ${
-              pathname === '/signup' ? 'border-b-2 border-black' : ''
-            }`}
+            className={`hover:text-gray-600 ${pathname === '/signup' ? 'border-b-2 border-black' : ''
+              }`}
           >
             Sign Up
           </Link>
@@ -68,7 +64,7 @@ export const Header = () => {
                 2
               </span>
             </button>
-            <button 
+            <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="relative"
             >
@@ -79,41 +75,43 @@ export const Header = () => {
             {isDropdownOpen && (
               <div className="absolute top-full right-0 mt-2 w-64 rounded-lg shadow-lg overflow-hidden z-50">
                 <div className="bg-gradient-to-b from-gray-700 to-gray-800 text-white py-2">
-                  <button 
+                  <Link href="/account" passHref>
+                    <button
+                      className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    >
+                      <User size={20} />
+                      <span>Manage My Account</span>
+                    </button>
+                  </Link>
+                  <button
                     className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
-                    onClick={() => {/* Handle account */}}
-                  >
-                    <User size={20} />
-                    <span>Manage My Account</span>
-                  </button>
-                  <button 
-                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
-                    onClick={() => {/* Handle orders */}}
+                    onClick={() => {/* Handle orders */ }}
                   >
                     <ShoppingBag size={20} />
                     <span>My Order</span>
                   </button>
-                  <button 
+                  <button
                     className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
-                    onClick={() => {/* Handle cancellations */}}
+                    onClick={() => {/* Handle cancellations */ }}
                   >
                     <X size={20} />
                     <span>My Cancellations</span>
                   </button>
-                  <button 
+                  <button
                     className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
-                    onClick={() => {/* Handle reviews */}}
+                    onClick={() => {/* Handle reviews */ }}
                   >
                     <Star size={20} />
                     <span>My Reviews</span>
                   </button>
-                  <button 
-                    className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
-                    onClick={() => {/* Handle logout */}}
-                  >
-                    <LogOut size={20} />
-                    <span>Logout</span>
-                  </button>
+                  <Link href="/" passHref>
+                    <button
+                      className="w-full px-4 py-2 flex items-center gap-3 hover:bg-white/10 transition-colors"
+                    >
+                      <User size={20} />
+                      <span>Logout</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             )}

@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { AuthProvider } from './providers'
 
 export const metadata = {
   title: 'E-commerce Store',
@@ -8,9 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        {children}
+      <body>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
-  );
+  )
 }
