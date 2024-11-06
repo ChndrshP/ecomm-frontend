@@ -1,5 +1,6 @@
 import React from 'react';
 import { Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Image from 'next/image';
 
 export const Footer = () => {
     return (
@@ -73,20 +74,20 @@ export const Footer = () => {
                         <h3 className="text-lg font-bold">Download App</h3>
                         <p className="text-sm text-gray-300">Save $3 with App New User Only</p>
                         <div className="flex flex-row items-center gap-4">
-                            <img
+                            <Image
                                 src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730875326/w0l73jxk686hc9da6jnl.png"
                                 alt="QR Code"
                                 className="w-20 h-20"
                             />
                             <div className="flex flex-col space-y-2">
                                 {/* Google Play Button */}
-                                <img
+                                <Image
                                         src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730875521/rjya8t3fvlhyghtch5jl.png"
                                         alt="Google Play Icon"
                                         className="w-100 h-10"
                                     />
                                 {/* App Store Button */}
-                                <img
+                                <Image
                                         src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730875520/zsbvk2ew9wmydslfnslh.png"
                                         alt="App Store Icon"
                                         className="w-100 h-10"

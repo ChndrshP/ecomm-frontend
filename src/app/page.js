@@ -29,7 +29,7 @@ export default function Component() {
       <section className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h3 className="text-red-500 font-semibold mb-1">Today's</h3>
+            <h3 className="text-red-500 font-semibold mb-1">Today&apos;s</h3>
             <div className="flex items-center space-x-8">
               <h2 className="text-2xl font-bold">Flash Sales</h2>
               <div className="flex space-x-4">
@@ -260,7 +260,7 @@ export default function Component() {
               />
 
               <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                <h3 className="text-2xl font-bold text-white mb-2">Women's Collections</h3>
+                <h3 className="text-2xl font-bold text-white mb-2">Women&apos;s Collections</h3>
                 <p className="text-white/80 text-sm mb-4">
                   Featured woman collections that give you another vibe.
                 </p>

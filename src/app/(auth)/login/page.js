@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { TopHeader } from "../../../components/layout/TopHeader"
 import { Header } from "../../../components/layout/Header"
 import { Footer } from "../../../components/layout/Footer"
+import Image from 'next/image'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -51,7 +52,7 @@ export default function LoginPage() {
       <Header />
       <main className="flex-grow grid grid-cols-2 gap-32 max-w-7xl mx-auto py-24 px-12">
         <div className="bg-[#C1DBE3]">
-          <img
+          <Image
             src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730886234/gtcy2jdumxibkle3tao4.png"
             alt="Shopping Cart with Phone"
             className="w-full h-full object-cover"
@@ -100,7 +101,7 @@ export default function LoginPage() {
               onClick={handleGoogleSignIn}
               className="w-full border border-gray-300 py-4 rounded flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
             >
-              <img
+              <Image
                 src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730887123/r89b1f1kifdsavnrdm2j.png"
                 alt="Google"
                 className="w-6 h-6"
