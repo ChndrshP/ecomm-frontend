@@ -55,9 +55,14 @@ export const Header = () => {
             <Search className="absolute right-3 top-2.5 text-gray-400" size={20} />
           </div>
           <div className="flex items-center gap-4">
-            <button className="relative">
+            <Link href="/wishlist" passHref>
+              <button className="relative">
               <Heart size={24} />
-            </button>
+                <span className="absolute text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  2
+                </span>
+              </button>
+            </Link>
 
             <Link href="/cart" passHref>
               <button className="relative">
