@@ -58,12 +58,16 @@ export const Header = () => {
             <button className="relative">
               <Heart size={24} />
             </button>
-            <button className="relative">
-              <ShoppingCart size={24} />
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                2
-              </span>
-            </button>
+
+            <Link href="/cart" passHref>
+              <button className="relative">
+                <ShoppingCart size={24} />
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                  2
+                </span>
+              </button>
+            </Link>
+
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="relative"

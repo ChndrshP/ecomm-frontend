@@ -7,6 +7,18 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer"
 
 const AccountPage = () => {
+    const updateQuantity = (id, newQuantity) => {
+        setCartItems(items =>
+            items.map(item =>
+                item.id === id ? { ...item, quantity: Math.max(1, newQuantity) } : item
+            )
+        )
+    }
+
+    const removeItem = (id) => {
+        setCartItems(items => items.filter(item => item.id !== id))
+    }
+
     const [formData, setFormData] = useState({
         firstName: 'Md',
         lastName: 'Rimel',
