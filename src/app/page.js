@@ -65,7 +65,7 @@ export default function Component() {
           {[1, 2, 3, 4].map((item) => (
             <div key={item} className="group relative border rounded-lg p-4">
               <div className="relative h-48 mb-4">
-                <Image src="/placeholder.svg" alt="Product" layout="fill" objectFit="contain" />
+                <Image src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730889361/jhsk8bhpie3nno84eqip.png" alt="Product" layout="fill" objectFit="contain" />
                 <button className="absolute top-4 right-4 p-1.5 bg-white rounded-full">
                   <Heart className="h-4 w-4" />
                 </button>
@@ -103,18 +103,26 @@ export default function Component() {
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          {['Phones', 'Computers', 'SmartWatch', 'Camera', 'HeadPhones', 'Gaming'].map((category) => (
+          {[
+            { name: 'Phones', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888814/vf3ywl1ohwnwk0e8bgm2.png' },
+            { name: 'Computers', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888816/r0fp9vqrjgsogphkezbk.png' },
+            { name: 'SmartWatch', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888819/kbmvasl8sq1b56fm2hp9.png' },
+            { name: 'Camera', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888813/gdibxyhtqnaiicsxjuqq.png' },
+            { name: 'HeadPhones', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888818/ucdgoiwewkm0nbcztmsz.png' },
+            { name: 'Gaming', imageUrl: 'https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888817/k2jjeslifpu2xbkhbrsq.png' },
+          ].map((category) => (
             <button
-              key={category}
+              key={category.name}
               className="flex flex-col items-center justify-center p-6 border rounded-lg hover:bg-red-500 hover:text-white transition-colors"
             >
               <div className="h-12 w-12 mb-2">
-                <Image src="/placeholder.svg" alt={category} width={48} height={48} />
+                <Image src={category.imageUrl} alt={category.name} width={48} height={48} />
               </div>
-              <span className="text-sm">{category}</span>
+              <span className="text-sm">{category.name}</span>
             </button>
           ))}
         </div>
+
       </section>
 
       {/* Best Selling Products */}
@@ -130,7 +138,7 @@ export default function Component() {
           {[1, 2, 3, 4].map((item) => (
             <div key={item} className="group relative border rounded-lg p-4">
               <div className="relative h-48 mb-4">
-                <Image src="/placeholder.svg" alt="Product" layout="fill" objectFit="contain" />
+                <Image src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730889361/jhsk8bhpie3nno84eqip.png" alt="Product" layout="fill" objectFit="contain" />
                 <button className="absolute top-4 right-4 p-1.5 bg-white rounded-full">
                   <Heart className="h-4 w-4" />
                 </button>
@@ -159,7 +167,7 @@ export default function Component() {
               <h2 className="text-4xl font-bold">Enhance Your<br />Music Experience</h2>
               <button className="px-8 py-2 bg-green-500 text-white rounded-full">Buy Now</button>
             </div>
-            <Image src="/placeholder.svg" alt="JBL Speaker" width={400} height={400} className="object-contain" />
+            <Image src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730888607/lzveotwracqbgfnihzph.png" alt="JBL Speaker" width={600} height={600} className="object-cover" />
           </div>
         </div>
       </section>
@@ -181,7 +189,7 @@ export default function Component() {
           {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
             <div key={item} className="group relative border rounded-lg p-4">
               <div className="relative h-48 mb-4">
-                <Image src="/placeholder.svg" alt="Product" layout="fill" objectFit="contain" />
+                <Image src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730889361/jhsk8bhpie3nno84eqip.png" alt="Product" layout="fill" objectFit="contain" />
                 <button className="absolute top-4 right-4 p-1.5 bg-white rounded-full">
                   <Heart className="h-4 w-4" />
                 </button>
