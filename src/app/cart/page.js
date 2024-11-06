@@ -113,8 +113,8 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-    <TopHeader />
-    <Header />
+      <TopHeader />
+      <Header />
       {/* Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex gap-2 text-sm">
@@ -232,9 +232,11 @@ export default function CartPage() {
                 <span>Total:</span>
                 <span>${total}</span>
               </div>
-              <button className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600">
-                Proceed to checkout
-              </button>
+              <Link href="/checkout" passHref>
+                <button className="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600">
+                  Proceed to checkout
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,36 +1,121 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-commerce Project
+
+This is a Next.js-based e-commerce project with features like product listing, cart management, wishlist, and user authentication.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your local machine:
+
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
 ## Getting Started
 
-First, run the development server:
+To get the project up and running on your local machine, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/e-commerce-project.git
+   cd e-commerce-project
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+
+   Create a `.env.local` file in the root directory and add the following variables:
+
+   ```
+   NEXT_PUBLIC_API_URL=your_api_url
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_nextauth_secret
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   ```
+
+   Replace the placeholder values with your actual configuration.
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   The application will be available at `http://localhost:3000`.
+
+## Project Structure
+
+```
+e-commerce-project/
+├── app/
+│   ├── api/
+│   │   └── auth/
+│   │       └── [...nextauth]/
+│   │           └── route.js
+│   ├── (auth)/
+│   │   ├── login/
+│   │   │   └── page.jsx
+│   │   └── signup/
+│   │       └── page.jsx
+│   ├── account/
+│   │   └── page.jsx
+│   ├── cart/
+│   │   └── page.jsx
+│   ├── wishlist/
+│   │   └── page.jsx
+│   ├── layout.jsx
+│   └── page.jsx
+├── componenjs/
+│   ├── layout/
+│   │   ├── Footer.jsx
+│   │   ├── Header.jsx
+│   │   └── TopHeader.jsx
+│   └── ui/
+│       └── (ui componenjs)
+├── styles/
+│   └── globals.css
+├── lib/
+│   └── (utility functions)
+├── public/
+│   └── (static assejs)
+├── .env.local
+├── next.config.js
+├── package.json
+├── README.md
+└── jsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Available Scripts
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+In the project directory, you can run:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev`: Runs the app in development mode
+- `npm run build`: Builds the app for production
+- `npm start`: Runs the built app in production mode
+- `npm run lint`: Runs the linter to check for code style issues
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- User authentication (NextAuth.js)
+- Product listing
+- Cart management
+- Wishlist functionality
+- Responsive design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 13 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- NextAuth.js for authentication
+- Lucide React for icons
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
