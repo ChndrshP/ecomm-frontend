@@ -41,7 +41,7 @@ const ContactPage = () => {
                             </Link>
                         </li>
                         <li>/</li>
-                        <li>Contact</li>
+                        <li><strong>Contact</strong></li>
                     </ol>
                 </nav>
             </div>

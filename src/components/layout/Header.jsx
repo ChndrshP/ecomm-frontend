@@ -1,17 +1,50 @@
+"use client";
+
 import React from 'react';
 import { Search, Heart, ShoppingCart, User } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 export const Header = () => {
+  const pathname = usePathname();
+
   return (
     <header className="py-4 px-6 border-b">
       <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-4">
         <h1 className="text-2xl font-bold">Exclusive</h1>
         
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="/" className="hover:text-gray-600 border-b-2 border-black">Home</a>
-          <a href="/contact" className="hover:text-gray-600">Contact</a>
-          <a href="/about" className="hover:text-gray-600">About</a>
-          <a href="/signup" className="hover:text-gray-600">Sign Up</a>
+          <a
+            href="/"
+            className={`hover:text-gray-600 ${
+              pathname === '/' ? 'border-b-2 border-black' : ''
+            }`}
+          >
+            Home
+          </a>
+          <a
+            href="/contact"
+            className={`hover:text-gray-600 ${
+              pathname === '/contact' ? 'border-b-2 border-black' : ''
+            }`}
+          >
+            Contact
+          </a>
+          <a
+            href="/about"
+            className={`hover:text-gray-600 ${
+              pathname === '/about' ? 'border-b-2 border-black' : ''
+            }`}
+          >
+            About
+          </a>
+          <a
+            href="/signup"
+            className={`hover:text-gray-600 ${
+              pathname === '/signup' ? 'border-b-2 border-black' : ''
+            }`}
+          >
+            Sign Up
+          </a>
         </nav>
 
         <div className="flex items-center gap-4 ml-auto md:ml-0">

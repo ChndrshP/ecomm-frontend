@@ -3,13 +3,13 @@ import Image from "next/image"
 import { Twitter, Instagram, Linkedin } from "lucide-react"
 import { TopHeader } from "@/components/layout/TopHeader";
 import { Header } from "@/components/layout/Header";
-import {Footer} from "@/components/layout/Footer"
+import { Footer } from "@/components/layout/Footer"
 
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
-    <TopHeader />
-    <Header />
+      <TopHeader />
+      <Header />
       {/* Breadcrumb */}
       <div className="container mx-auto px-4 py-8">
         <nav className="text-sm text-gray-500">
@@ -20,7 +20,7 @@ const AboutPage = () => {
               </Link>
             </li>
             <li>/</li>
-            <li>About</li>
+            <li><strong>About</strong></li>
           </ol>
         </nav>
       </div>
@@ -41,10 +41,10 @@ const AboutPage = () => {
           </div>
           <div className="relative h-[400px]">
             <Image
-              src="/placeholder.svg"
+              src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885031/oqucixqu7ciwosxypzut.png"
               alt="Shopping Experience"
               fill
-              className="object-cover rounded-lg"
+              className="object-contain rounded-lg "
             />
           </div>
         </div>
@@ -54,34 +54,55 @@ const AboutPage = () => {
       <section className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-6 border rounded-lg text-center transition-colors duration-300 hover:bg-red-500 hover:text-white group">
-            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
-              <Image src="/placeholder.svg" alt="Sellers Icon" width={24} height={24} />
+            <div className="relative w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885625/l2dssem41e2sg299q35k.png"
+                alt="Sellers Icon"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
             <div className="text-3xl font-bold mb-2">10.5k</div>
-            <div className="text-sm text-gray-600 group-hover:text-white">Sellers active our site</div>
+            <div className="text-sm text-gray-600 group-hover:text-white">Sellers active on our site</div>
           </div>
           <div className="p-6 border rounded-lg text-center transition-colors duration-300 hover:bg-red-500 hover:text-white group">
-            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
-              <Image src="/placeholder.svg" alt="Monthly Sales Icon" width={24} height={24} />
+            <div className="relative w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885625/rd4ap1vrer36kjnbtaqa.png"
+                alt="Monthly Sales Icon"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
             <div className="text-3xl font-bold mb-2">33k</div>
-            <div className="text-sm group-hover:text-gray-600">Monthly Product Sale</div>
+            <div className="text-sm text-gray-600 group-hover:text-white">Monthly Product Sale</div>
           </div>
           <div className="p-6 border rounded-lg text-center transition-colors duration-300 hover:bg-red-500 hover:text-white group">
-            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
-              <Image src="/placeholder.svg" alt="Customers Icon" width={24} height={24} />
+            <div className="relative w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885625/qcav2i1sxfsrvtlls8ds.png"
+                alt="Customers Icon"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
             <div className="text-3xl font-bold mb-2">45.5k</div>
-            <div className="text-sm text-gray-600 group-hover:text-white">Customer active in our site</div>
+            <div className="text-sm text-gray-600 group-hover:text-white">Customers active on our site</div>
           </div>
           <div className="p-6 border rounded-lg text-center transition-colors duration-300 hover:bg-red-500 hover:text-white group">
-            <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
-              <Image src="/placeholder.svg" alt="Sales Icon" width={24} height={24} />
+            <div className="relative w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885625/lmzpnskeebvjejdgumb8.png"
+                alt="Sales Icon"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
             <div className="text-3xl font-bold mb-2">25k</div>
-            <div className="text-sm text-gray-600 group-hover:text-white">Anual gross sale in our site</div>
+            <div className="text-sm text-gray-600 group-hover:text-white">Annual gross sale on our site</div>
           </div>
         </div>
+
       </section>
 
       {/* Team Section */}
@@ -91,17 +112,17 @@ const AboutPage = () => {
             {
               name: "Tom Cruise",
               role: "Founder & Chairman",
-              image: "/placeholder.svg"
+              image: "https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885030/jgdsgp0e35jfocf3uenm.png"
             },
             {
               name: "Emma Watson",
               role: "Managing Director",
-              image: "/placeholder.svg"
+              image: "https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885031/wpofojv7blmmnamfzryy.png"
             },
             {
               name: "Will Smith",
               role: "Product Designer",
-              image: "/placeholder.svg"
+              image: "https://res.cloudinary.com/dwqbouhmd/image/upload/v1730885030/pwhrwy6nqjxfap9aiznx.png"
             }
           ].map((member, index) => (
             <div key={index} className="text-center">
@@ -110,7 +131,7 @@ const AboutPage = () => {
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover rounded-lg"
+                  className="object-contain rounded-lg"
                 />
               </div>
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
@@ -133,7 +154,7 @@ const AboutPage = () => {
           {[0, 1, 2, 3, 4].map((dot) => (
             <button
               key={dot}
-              className={`h-2.5 w-2.5 rounded-full ${dot === 0 ? 'bg-red-500' : 'bg-gray-200'}`}
+              className={`h-2.5 w-2.5 rounded-full ${dot === 2 ? 'bg-red-500' : 'bg-gray-200'}`}
               aria-label={`Go to slide ${dot + 1}`}
             />
           ))}
@@ -141,28 +162,48 @@ const AboutPage = () => {
       </section>
 
       {/* Services Section */}
-      <section className="container mx-auto px-4 py-12 border-t">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-              <Image src="/placeholder.svg" alt="Delivery" width={32} height={32} />
+      <section className="container mx-auto px-4 py-10 border-t">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {/* Free and Fast Delivery */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880673/ngh3d6dsquie1jzzjz4i.png"
+                alt="Delivery"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <h3 className="font-semibold mb-2">FREE AND FAST DELIVERY</h3>
-            <p className="text-sm text-gray-600">Free delivery for all orders over $140</p>
+            <h3 className="font-semibold">FREE AND FAST DELIVERY</h3>
+            <p className="text-sm text-gray-500">Free delivery for all orders over $140</p>
           </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-              <Image src="/placeholder.svg" alt="Support" width={32} height={32} />
+
+          {/* 24/7 Customer Service */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880672/tawwfcq54qmuoejavkvf.png"
+                alt="Support"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <h3 className="font-semibold mb-2">24/7 CUSTOMER SERVICE</h3>
-            <p className="text-sm text-gray-600">Friendly 24/7 customer support</p>
+            <h3 className="font-semibold">24/7 CUSTOMER SERVICE</h3>
+            <p className="text-sm text-gray-500">Friendly 24/7 customer support</p>
           </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4">
-              <Image src="/placeholder.svg" alt="Guarantee" width={32} height={32} />
+
+          {/* Money Back Guarantee */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880673/bdvmu3nbmoxlu1bgpvst.png"
+                alt="Guarantee"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <h3 className="font-semibold mb-2">MONEY BACK GUARANTEE</h3>
-            <p className="text-sm text-gray-600">We return money within 30 days</p>
+            <h3 className="font-semibold">MONEY BACK GUARANTEE</h3>
+            <p className="text-sm text-gray-500">We return money within 30 days</p>
           </div>
         </div>
       </section>

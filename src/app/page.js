@@ -5,7 +5,8 @@ import Link from "next/link"
 import { useState } from "react"
 import { TopHeader } from "../components/layout/TopHeader";
 import { Header } from "../components/layout/Header";
-import {Footer} from "../components/layout/Footer"
+import { Footer } from "../components/layout/Footer"
+import HeroSection from "@/components/layout/HeroSection"
 
 
 export default function Component() {
@@ -22,20 +23,7 @@ export default function Component() {
       <Header />
 
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="relative h-[400px] bg-black rounded-lg overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-between p-12">
-            <div className="text-white space-y-4">
-              <Image src="/placeholder.svg" alt="iPhone" width={100} height={100} className="mb-4" />
-              <h2 className="text-4xl font-bold">Up to 10% off Voucher</h2>
-              <Link href="#" className="inline-block border-b-2 border-white pb-1">
-                Shop Now
-              </Link>
-            </div>
-            <Image src="/placeholder.svg" alt="iPhone 14" width={300} height={300} className="object-contain" />
-          </div>
-        </div>
-      </div>
+      <HeroSection />
 
       {/* Flash Sales */}
       <section className="container mx-auto px-4 py-8">
@@ -218,82 +206,162 @@ export default function Component() {
       </section>
 
       {/* New Arrival */}
-      <section className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-6">New Arrival</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="col-span-2 row-span-2 relative h-[600px] bg-black rounded-lg overflow-hidden">
-            <div className="absolute inset-0 p-8 text-white">
-              <h3 className="text-3xl font-bold mb-4">PlayStation 5</h3>
-              <p className="mb-4">Black and White version of the PS5 coming out on sale.</p>
-              <Link href="#" className="text-sm border-b border-white">
+      <section className="container mx-auto px-4 py-12">
+        {/* Section Header */}
+        <div className="mb-8">
+          <div className="inline-flex items-center gap-2">
+            <div className="w-5 h-10 bg-red-500 rounded-sm" />
+            <span className="text-red-500 font-semibold">Featured</span>
+          </div>
+          <h2 className="text-4xl font-bold mt-4">New Arrival</h2>
+        </div>
+
+        {/* Products Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* PlayStation 5 */}
+          <div className="relative h-[580px] bg-black rounded-lg overflow-hidden">
+            <Image
+              src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730881924/f73dkzfsf3mejbbm8r0v.png"
+              alt="PlayStation 5"
+              fill
+              className="object-contain p-12 mt-12"
+            />
+            <div className="absolute inset-0 p-8 flex flex-col justify-end">
+              <h3 className="text-3xl font-bold text-white mb-4">PlayStation 5</h3>
+              <p className="text-white/80 mb-4">
+                Black and White version of the PS5 coming out on sale.
+              </p>
+              <Link
+                href="#"
+                className="text-white text-sm border-b border-white w-fit hover:opacity-80"
+              >
                 Shop Now
               </Link>
             </div>
-            <Image src="/placeholder.svg" alt="PS5" layout="fill" objectFit="contain" className="p-8" />
           </div>
-          <div className="relative h-[290px] bg-black rounded-lg overflow-hidden">
-            <div className="absolute inset-0 p-8 text-white">
-              <h3 className="text-xl font-bold mb-2">Women's Collections</h3>
-              <p className="text-sm mb-4">Featured woman collections that give you another vibe.</p>
-              <Link href="#" className="text-sm border-b border-white">
-                Shop Now
-              </Link>
+
+          {/* Right Column Grid */}
+          <div className="grid grid-rows-2 gap-8">
+            {/* Women's Collections */}
+            <div className="relative h-[280px] bg-black rounded-lg overflow-hidden">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730881923/rx5lilonrstbynidkvyu.png"
+                alt="Women's Collections"
+                fill
+                className="object-cover p-0"
+              />
+
+              <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                <h3 className="text-2xl font-bold text-white mb-2">Women's Collections</h3>
+                <p className="text-white/80 text-sm mb-4">
+                  Featured woman collections that give you another vibe.
+                </p>
+                <Link
+                  href="#"
+                  className="text-white text-sm border-b border-white w-fit hover:opacity-80"
+                >
+                  Shop Now
+                </Link>
+              </div>
             </div>
-          </div>
-          <div className="relative h-[290px] bg-black rounded-lg overflow-hidden">
-            <div className="absolute inset-0 p-8 text-white">
-              <h3 className="text-xl font-bold  mb-2">Speakers</h3>
-              <p className="text-sm mb-4">Amazon wireless speakers</p>
-              <Link href="#" className="text-sm border-b border-white">
-                Shop Now
-              </Link>
-            </div>
-          </div>
-          <div className="relative h-[290px] bg-black rounded-lg overflow-hidden">
-            <div className="absolute inset-0 p-8 text-white">
-              <h3 className="text-xl font-bold mb-2">Perfume</h3>
-              <p className="text-sm mb-4">GUCCI INTENSE OUD EDP</p>
-              <Link href="#" className="text-sm border-b border-white">
-                Shop Now
-              </Link>
+
+            {/* Bottom Row Grid */}
+            <div className="grid grid-cols-2 gap-8">
+              {/* Speakers */}
+              <div className="relative h-[280px] bg-black rounded-lg overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730881922/jhycdp7mgzkjjmffpife.png"
+                  alt="Speakers"
+                  fill
+                  className="object-contain p-8"
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h3 className="text-xl font-bold text-white mb-2">Speakers</h3>
+                  <p className="text-white/80 text-sm mb-4">
+                    Amazon wireless speakers
+                  </p>
+                  <Link
+                    href="#"
+                    className="text-white text-sm border-b border-white w-fit hover:opacity-80"
+                  >
+                    Shop Now
+                  </Link>
+                </div>
+              </div>
+
+              {/* Perfume */}
+              <div className="relative h-[280px] bg-black rounded-lg overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730881923/xh8pteqwslqdendbkjph.png"
+                  alt="Perfume"
+                  fill
+                  className="object-contain p-8"
+                />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h3 className="text-xl font-bold text-white mb-2">Perfume</h3>
+                  <p className="text-white/80 text-sm mb-4">
+                    GUCCI INTENSE OUD EDP
+                  </p>
+                  <Link
+                    href="#"
+                    className="text-white text-sm border-b border-white w-fit hover:opacity-80"
+                  >
+                    Shop Now
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="container mx-auto px-4 py-10 border-t">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-center justify-center space-x-4">
-            <div className="p-4 bg-gray-100 rounded-full">
-              <Image src="/placeholder.svg" alt="Delivery" width={40} height={40} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          {/* Free and Fast Delivery */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880673/ngh3d6dsquie1jzzjz4i.png"
+                alt="Delivery"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <div>
-              <h3 className="font-semibold">FREE AND FAST DELIVERY</h3>
-              <p className="text-sm text-gray-500">Free delivery for all orders over $140</p>
-            </div>
+            <h3 className="font-semibold">FREE AND FAST DELIVERY</h3>
+            <p className="text-sm text-gray-500">Free delivery for all orders over $140</p>
           </div>
-          <div className="flex items-center justify-center space-x-4">
-            <div className="p-4 bg-gray-100 rounded-full">
-              <Image src="/placeholder.svg" alt="Support" width={40} height={40} />
+
+          {/* 24/7 Customer Service */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880672/tawwfcq54qmuoejavkvf.png"
+                alt="Support"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <div>
-              <h3 className="font-semibold">24/7 CUSTOMER SERVICE</h3>
-              <p className="text-sm text-gray-500">Friendly 24/7 customer support</p>
-            </div>
+            <h3 className="font-semibold">24/7 CUSTOMER SERVICE</h3>
+            <p className="text-sm text-gray-500">Friendly 24/7 customer support</p>
           </div>
-          <div className="flex items-center justify-center space-x-4">
-            <div className="p-4 bg-gray-100 rounded-full">
-              <Image src="/placeholder.svg" alt="Guarantee" width={40} height={40} />
+
+          {/* Money Back Guarantee */}
+          <div className="flex flex-col items-center space-y-2">
+            <div className="relative w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
+              <Image
+                src="https://res.cloudinary.com/dwqbouhmd/image/upload/v1730880673/bdvmu3nbmoxlu1bgpvst.png"
+                alt="Guarantee"
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
-            <div>
-              <h3 className="font-semibold">MONEY BACK GUARANTEE</h3>
-              <p className="text-sm text-gray-500">We return money within 30 days</p>
-            </div>
+            <h3 className="font-semibold">MONEY BACK GUARANTEE</h3>
+            <p className="text-sm text-gray-500">We return money within 30 days</p>
           </div>
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </div>
   )
 }
