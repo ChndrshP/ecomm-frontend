@@ -3,8 +3,6 @@ import { Heart, Search, ShoppingCart, ChevronLeft, ChevronRight, Star } from "lu
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import LoginPage from "../app/(auth)/login/page";
-import SignupPage from "../app/(auth)/signup/page";
 import { TopHeader } from "../components/layout/TopHeader";
 import { Header } from "../components/layout/Header";
 import {Footer} from "../components/layout/Footer"
